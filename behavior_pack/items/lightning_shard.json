@@ -1,0 +1,22 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "identifier": "boomhammer:lightning_shard",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "boomhammer_lightning_shard"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "Lightning Shard"
+      },
+      "minecraft:max_stack_size": 64
+    }
+  }
+}

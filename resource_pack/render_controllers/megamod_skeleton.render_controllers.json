@@ -1,0 +1,16 @@
+{
+ "format_version": "1.8.0",
+ "render_controllers": {
+  "controller.render.megamod_skeleton": {
+   "geometry": "Geometry.default",
+   "materials": [
+    {
+     "*": "Material.default"
+    }
+   ],
+   "textures": [
+    "query.is_name_any('Fire Skeleton') ? (Texture.fire) : (Texture.default)"
+   ]
+  }
+ }
+}

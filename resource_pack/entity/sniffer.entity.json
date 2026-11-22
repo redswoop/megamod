@@ -1,0 +1,72 @@
+{
+ "format_version": "1.26.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "minecraft:sniffer",
+   "materials": {
+    "default": "sniffer"
+   },
+   "textures": {
+    "default": "textures/entity/sniffer/sniffer",
+    "baby": "textures/entity/sniffer/snifflet"
+   },
+   "scripts": {
+    "scale": "(query.is_baby ? (1 / 0.45) : 1.0) * ((query.is_name_any('Mutant Sniffer') || v.machines_mutant) ? 1.8 : 1.0)",
+    "pre_animation": [
+     "v.machines_mutant = query.is_name_any('Mutant Sniffer');",
+     "variable.moving = math.min(1.0, query.modified_move_speed * 10);"
+    ],
+    "animate": [
+     "general",
+     "controller_walk",
+     "controller_sniffsniff",
+     "controller_long_sniff",
+     "controller_search",
+     "controller_dig",
+     "controller_stand_up",
+     "controller_feeling_happy"
+    ],
+    "initialize": [
+     "v.machines_mutant = 0.0;"
+    ]
+   },
+   "geometry": {
+    "default": "geometry.sniffer",
+    "baby": "geometry.sniffer.baby"
+   },
+   "animations": {
+    "walk": "animation.sniffer.walk",
+    "look_at_target": "animation.common.look_at_target",
+    "sniffsniff": "animation.sniffer.sniffsniff",
+    "long_sniff": "animation.sniffer.longsniff",
+    "search": "animation.sniffer.search",
+    "dig": "animation.sniffer.dig",
+    "stand_up": "animation.sniffer.stand_up",
+    "feeling_happy": "animation.sniffer.feeling_happy",
+    "general": "controller.animation.sniffer.general",
+    "controller_walk": "controller.animation.sniffer.walk",
+    "controller_sniffsniff": "controller.animation.sniffer.sniffsniff",
+    "controller_long_sniff": "controller.animation.sniffer.long_sniff",
+    "controller_search": "controller.animation.sniffer.search",
+    "controller_dig": "controller.animation.sniffer.dig",
+    "controller_stand_up": "controller.animation.sniffer.stand_up",
+    "controller_feeling_happy": "controller.animation.sniffer.feeling_happy"
+   },
+   "render_controllers": [
+    "controller.render.sniffer.v2"
+   ],
+   "spawn_egg": {
+    "texture": "spawn_egg_sniffer"
+   },
+   "sound_effects": {
+    "drop_seed": "mob.sniffer.drop_seed",
+    "sniffsniff": "mob.sniffer.sniffsniff",
+    "searching": "mob.sniffer.searching",
+    "long_sniff": "mob.sniffer.long_sniff",
+    "digging": "mob.sniffer.digging",
+    "stand_up": "mob.sniffer.stand_up",
+    "happy": "mob.sniffer.happy"
+   }
+  }
+ }
+}

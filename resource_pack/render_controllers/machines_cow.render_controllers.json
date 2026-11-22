@@ -1,0 +1,47 @@
+{
+ "format_version": "1.8.0",
+ "render_controllers": {
+  "controller.render.machines_cow": {
+   "arrays": {
+    "textures": {
+     "Array.textures": [
+      "Texture.default",
+      "Texture.warm",
+      "Texture.cold"
+     ],
+     "Array.baby_textures": [
+      "Texture.baby_default",
+      "Texture.baby_warm",
+      "Texture.baby_cold"
+     ],
+     "Array.mutant_textures": [
+      "Texture.mutant_default",
+      "Texture.mutant_warm",
+      "Texture.mutant_cold"
+     ]
+    },
+    "geometries": {
+     "Array.geos": [
+      "Geometry.default",
+      "Geometry.warm",
+      "Geometry.cold"
+     ],
+     "Array.mutant_geos": [
+      "Geometry.mutant_default",
+      "Geometry.mutant_warm",
+      "Geometry.mutant_cold"
+     ]
+    }
+   },
+   "geometry": "query.is_baby ? Geometry.baby : ((query.is_name_any('Mutant Cow') || v.machines_mutant) ? Array.mutant_geos[v.index] : Array.geos[v.index])",
+   "materials": [
+    {
+     "*": "v.is_cold ? Material.cold : Material.default"
+    }
+   ],
+   "textures": [
+    "query.is_baby ? Array.baby_textures[v.index] : ((query.is_name_any('Mutant Cow') || v.machines_mutant) ? Array.mutant_textures[v.index] : Array.textures[v.index])"
+   ]
+  }
+ }
+}

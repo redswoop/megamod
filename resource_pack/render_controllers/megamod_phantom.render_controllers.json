@@ -1,0 +1,24 @@
+{
+ "format_version": "1.8.0",
+ "render_controllers": {
+  "controller.render.megamod_phantom": {
+   "arrays": {
+    "materials": {
+     "Array.materials": [
+      "Material.default",
+      "Material.invisible"
+     ]
+    }
+   },
+   "geometry": "Geometry.default",
+   "materials": [
+    {
+     "*": "Array.materials[query.is_invisible]"
+    }
+   ],
+   "textures": [
+    "query.is_name_any('Phoenix') ? (Texture.phoenix) : (Texture.default)"
+   ]
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "format_version": "1.26.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "minecraft:witch",
+   "min_engine_version": "1.8.0",
+   "materials": {
+    "default": "witch"
+   },
+   "textures": {
+    "default": "textures/entity/witch"
+   },
+   "geometry": {
+    "default": "geometry.villager.witch.v1.8"
+   },
+   "scripts": {
+    "scale": "(0.9375) * ((query.is_name_any('Mutant Witch') || v.machines_mutant) ? 1.8 : 1.0)",
+    "animate": [
+     "controller_general",
+     "controller_move"
+    ],
+    "initialize": [
+     "v.machines_mutant = 0.0;"
+    ],
+    "pre_animation": [
+     "v.machines_mutant = query.is_name_any('Mutant Witch');"
+    ]
+   },
+   "animations": {
+    "villager_general": "animation.villager.general",
+    "look_at_target": "animation.common.look_at_target",
+    "move": "animation.villager.move",
+    "general": "animation.witch.general",
+    "controller_general": "controller.animation.witch.general",
+    "controller_move": "controller.animation.villager.move"
+   },
+   "render_controllers": [
+    "controller.render.witch"
+   ],
+   "spawn_egg": {
+    "texture": "spawn_egg_witch"
+   }
+  }
+ }
+}

@@ -1,0 +1,9 @@
+pack.name=Mega Mod
+item.boomhammer:boom_hammer=Boom Hammer
+item.boomhammer:fire_staff=Fire Staff
+item.boomhammer:lightning_bow=Lightning Bow
+item.boomhammer:lightning_arrow=Lightning Arrow
+item.boomhammer:lightning_shard=Lightning Shard
+item.boomhammer:lightning_house=Lightning House
+item.boomhammer:insomnia_creeper_egg=Insomnia Creeper Egg
+tile.machines.combiner.name=Combiner

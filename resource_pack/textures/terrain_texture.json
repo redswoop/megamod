@@ -1,0 +1,12 @@
+{
+ "resource_pack_name": "megamod",
+ "texture_name": "atlas.terrain",
+ "texture_data": {
+  "machines_combiner_side": {
+   "textures": "textures/blocks/machines/combiner_side"
+  },
+  "machines_combiner_top": {
+   "textures": "textures/blocks/machines/combiner_top"
+  }
+ }
+}

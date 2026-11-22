@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boomhammer:lightning_arrow"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SSS",
+      "SAS",
+      "SSS"
+    ],
+    "key": {
+      "S": {
+        "item": "boomhammer:lightning_shard"
+      },
+      "A": {
+        "item": "minecraft:arrow"
+      }
+    },
+    "unlock": [
+      {
+        "item": "boomhammer:lightning_shard"
+      }
+    ],
+    "result": {
+      "item": "boomhammer:lightning_arrow",
+      "count": 8
+    }
+  }
+}

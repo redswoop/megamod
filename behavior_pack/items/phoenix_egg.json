@@ -1,0 +1,22 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "identifier": "impossible:phoenix_egg",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "impossible_phoenix_egg"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "Phoenix Egg"
+      },
+      "minecraft:max_stack_size": 64
+    }
+  }
+}

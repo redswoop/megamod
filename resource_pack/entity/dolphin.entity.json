@@ -1,0 +1,44 @@
+{
+ "format_version": "1.26.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "minecraft:dolphin",
+   "materials": {
+    "default": "dolphin"
+   },
+   "textures": {
+    "default": "textures/entity/dolphin",
+    "baby": "textures/entity/dolphin/dolphin_baby"
+   },
+   "geometry": {
+    "default": "geometry.dolphin",
+    "baby": "geometry.dolphin.baby"
+   },
+   "animations": {
+    "move": "animation.dolphin.move",
+    "move_controller": "controller.animation.dolphin.general"
+   },
+   "scripts": {
+    "scale": "(query.is_baby ? (1 / 0.65) : 1.0) * ((query.is_name_any('Mutant Dolphin') || v.machines_mutant) ? 1.8 : 1.0)",
+    "animate": [
+     "move_controller"
+    ],
+    "initialize": [
+     "v.machines_mutant = 0.0;"
+    ],
+    "pre_animation": [
+     "v.machines_mutant = query.is_name_any('Mutant Dolphin');"
+    ]
+   },
+   "particle_effects": {
+    "dolphin_move_particle": "minecraft:dolphin_move_particle"
+   },
+   "render_controllers": [
+    "controller.render.dolphin.v2"
+   ],
+   "spawn_egg": {
+    "texture": "spawn_egg_dolphin"
+   }
+  }
+ }
+}

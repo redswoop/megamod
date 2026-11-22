@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boomhammer:fire_staff"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "F",
+      "S",
+      "S"
+    ],
+    "key": {
+      "F": { "item": "minecraft:flint_and_steel" },
+      "S": { "item": "minecraft:stick" }
+    },
+    "unlock": [
+      { "item": "minecraft:flint_and_steel" }
+    ],
+    "result": { "item": "boomhammer:fire_staff" }
+  }
+}

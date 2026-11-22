@@ -1,0 +1,43 @@
+{
+ "format_version": "1.26.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "minecraft:spider",
+   "min_engine_version": "1.8.0",
+   "materials": {
+    "default": "spider",
+    "invisible": "spider_invisible"
+   },
+   "textures": {
+    "default": "textures/entity/spider/spider"
+   },
+   "geometry": {
+    "default": "geometry.spider.v1.8"
+   },
+   "animations": {
+    "default_leg_pose": "animation.spider.default_leg_pose",
+    "look_at_target": "animation.spider.look_at_target",
+    "walk": "animation.spider.walk",
+    "move": "controller.animation.spider.move"
+   },
+   "render_controllers": [
+    "controller.render.spider"
+   ],
+   "spawn_egg": {
+    "texture": "spawn_egg_spider"
+   },
+   "scripts": {
+    "animate": [
+     "move"
+    ],
+    "initialize": [
+     "v.machines_mutant = 0.0;"
+    ],
+    "pre_animation": [
+     "v.machines_mutant = query.is_name_any('Mutant Spider');"
+    ],
+    "scale": "(1.0) * ((query.is_name_any('Mutant Spider') || v.machines_mutant) ? 1.8 : 1.0)"
+   }
+  }
+ }
+}

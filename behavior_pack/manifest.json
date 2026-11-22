@@ -1,0 +1,45 @@
+{
+ "format_version": 2,
+ "header": {
+  "name": "Mega Mod 0.1.0",
+  "description": "Mega Mod 0.1.0: Boom Hammer 0.1.16, Impossible Mode 0.1.15, Mutant Machines 0.1.14, all in one pack.",
+  "uuid": "1d4d065c-b0c5-4fc9-a63a-817770cdfa70",
+  "version": [
+   0,
+   1,
+   0
+  ],
+  "min_engine_version": [
+   1,
+   26,
+   20
+  ]
+ },
+ "modules": [
+  {
+   "type": "script",
+   "language": "javascript",
+   "uuid": "1d0cc0b7-7a30-4e82-81df-4f7b168f0381",
+   "entry": "scripts/main.js",
+   "version": [
+    0,
+    1,
+    0
+   ]
+  }
+ ],
+ "dependencies": [
+  {
+   "module_name": "@minecraft/server",
+   "version": "2.0.0"
+  },
+  {
+   "uuid": "ebbead89-e186-4137-ae09-93221a7fb814",
+   "version": [
+    0,
+    1,
+    0
+   ]
+  }
+ ]
+}

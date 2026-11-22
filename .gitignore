@@ -1,0 +1,6 @@
+*.mcpack
+*.mcaddon
+__pycache__/
+.DS_Store
+# private notes
+CLAUDE.md

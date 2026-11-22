@@ -1,0 +1,50 @@
+{
+ "format_version": "1.26.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "minecraft:vex",
+   "min_engine_version": "1.8.0",
+   "materials": {
+    "default": "vex"
+   },
+   "textures": {
+    "default": "textures/entity/vex/vex",
+    "charging": "textures/entity/vex/vex_charging"
+   },
+   "geometry": {
+    "default": "geometry.vex.v1.8"
+   },
+   "scripts": {
+    "pre_animation": [
+     "v.machines_mutant = query.is_name_any('Mutant Vex');",
+     "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+     "variable.empty_handed  = !query.is_item_equipped(0) && !query.is_item_equipped(1);"
+    ],
+    "scale": "(1.0) * ((query.is_name_any('Mutant Vex') || v.machines_mutant) ? 1.8 : 1.0)",
+    "animate": [
+     "look_at_target",
+     "controller_vex_charge",
+     "controller_vex_idle"
+    ],
+    "initialize": [
+     "v.machines_mutant = 0.0;"
+    ]
+   },
+   "animations": {
+    "look_at_target_default": "animation.humanoid.look_at_target.default",
+    "vex_charge": "animation.vex.charge",
+    "vex_idle": "animation.vex.idle",
+    "look_at_target": "controller.animation.humanoid.look_at_target",
+    "controller_vex_charge": "controller.animation.vex.charge",
+    "controller_vex_idle": "controller.animation.vex.idle"
+   },
+   "render_controllers": [
+    "controller.render.vex"
+   ],
+   "held_item_ignores_lighting": true,
+   "spawn_egg": {
+    "texture": "spawn_egg_vex"
+   }
+  }
+ }
+}

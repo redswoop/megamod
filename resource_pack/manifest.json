@@ -1,0 +1,39 @@
+{
+ "format_version": 2,
+ "header": {
+  "name": "Mega Mod 0.1.0 (art)",
+  "description": "Textures for Mega Mod: Boom Hammer 0.1.16, Impossible Mode 0.1.15, Mutant Machines 0.1.14.",
+  "uuid": "ebbead89-e186-4137-ae09-93221a7fb814",
+  "version": [
+   0,
+   1,
+   0
+  ],
+  "min_engine_version": [
+   1,
+   26,
+   20
+  ]
+ },
+ "modules": [
+  {
+   "type": "resources",
+   "uuid": "9d989250-277d-4978-8702-b62130646108",
+   "version": [
+    0,
+    1,
+    0
+   ]
+  }
+ ],
+ "dependencies": [
+  {
+   "uuid": "1d4d065c-b0c5-4fc9-a63a-817770cdfa70",
+   "version": [
+    0,
+    1,
+    0
+   ]
+  }
+ ]
+}

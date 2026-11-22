@@ -1,0 +1,16 @@
+{
+ "format_version": "1.8.0",
+ "render_controllers": {
+  "controller.render.megamod_zombie": {
+   "geometry": "query.is_baby ? Geometry.baby : ((query.is_name_any('Mutant Zombie') || v.machines_mutant) ? Geometry.mutant : Geometry.default)",
+   "materials": [
+    {
+     "*": "Material.default"
+    }
+   ],
+   "textures": [
+    "query.is_name_any('Lightning Zombie', '§eLightning Zombie') ? ((query.is_baby ? Texture.lightning_baby : Texture.lightning)) : (query.is_name_any('Dark Zombie') ? ((query.is_baby ? Texture.dark_baby : Texture.dark)) : (query.is_baby ? Texture.baby : ((query.is_name_any('Mutant Zombie') || v.machines_mutant) ? Texture.mutant : Texture.default)))"
+   ]
+  }
+ }
+}

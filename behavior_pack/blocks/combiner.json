@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "machines:combiner",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "machines_combiner_side",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "machines_combiner_top",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "machines_combiner_top",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1200
+      },
+      "minecraft:light_emission": 8,
+      "minecraft:map_color": "#a040e0",
+      "minecraft:display_name": "tile.machines.combiner.name"
+    }
+  }
+}

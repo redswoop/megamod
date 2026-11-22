@@ -1,0 +1,43 @@
+{
+ "format_version": "1.26.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "minecraft:polar_bear",
+   "materials": {
+    "default": "polar_bear"
+   },
+   "textures": {
+    "default": "textures/entity/polar_bear",
+    "baby": "textures/entity/polar_bear/polar_bear_baby"
+   },
+   "geometry": {
+    "default": "geometry.polarbear",
+    "baby": "geometry.polar_bear.baby"
+   },
+   "animations": {
+    "walk": "animation.quadruped.walk",
+    "move": "animation.polarbear.move",
+    "look_at_target": "animation.common.look_at_target",
+    "controller_move": "controller.animation.polar_bear.move"
+   },
+   "scripts": {
+    "scale": "(query.is_baby ? 2.0 : 1.2) * ((query.is_name_any('Mutant Polar Bear') || v.machines_mutant) ? 1.8 : 1.0)",
+    "animate": [
+     "controller_move"
+    ],
+    "initialize": [
+     "v.machines_mutant = 0.0;"
+    ],
+    "pre_animation": [
+     "v.machines_mutant = query.is_name_any('Mutant Polar Bear');"
+    ]
+   },
+   "render_controllers": [
+    "controller.render.polar_bear.v2"
+   ],
+   "spawn_egg": {
+    "texture": "spawn_egg_polar_bear"
+   }
+  }
+ }
+}

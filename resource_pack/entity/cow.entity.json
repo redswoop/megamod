@@ -1,0 +1,63 @@
+{
+ "format_version": "1.26.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "minecraft:cow",
+   "min_engine_version": "1.8.0",
+   "materials": {
+    "default": "cow",
+    "cold": "cow_cold"
+   },
+   "textures": {
+    "default": "textures/entity/cow/cow_v2",
+    "warm": "textures/entity/cow/cow_warm",
+    "cold": "textures/entity/cow/cow_cold",
+    "baby_default": "textures/entity/cow/cow_temperate_baby",
+    "baby_cold": "textures/entity/cow/cow_cold_baby",
+    "baby_warm": "textures/entity/cow/cow_warm_baby",
+    "mutant_default": "textures/entity/machines/mutant_cow_v2",
+    "mutant_warm": "textures/entity/machines/mutant_cow_warm",
+    "mutant_cold": "textures/entity/machines/mutant_cow_cold"
+   },
+   "geometry": {
+    "default": "geometry.cow.v2",
+    "baby": "geometry.cow.baby",
+    "warm": "geometry.cow.warm",
+    "cold": "geometry.cow.cold",
+    "mutant_default": "geometry.machines.mutant_cow_v2",
+    "mutant_warm": "geometry.machines.mutant_cow_warm",
+    "mutant_cold": "geometry.machines.mutant_cow_cold"
+   },
+   "animations": {
+    "setup": "animation.cow.setup",
+    "walk": "animation.quadruped.walk",
+    "look_at_target": "animation.common.look_at_target"
+   },
+   "scripts": {
+    "scale": "(query.is_baby ? 2.0 : 1.0) * ((query.is_name_any('Mutant Cow') || v.machines_mutant) ? 1.8 : 1.0)",
+    "pre_animation": [
+     "v.machines_mutant = query.is_name_any('Mutant Cow');",
+     "t.variant = query.property('minecraft:climate_variant');",
+     "v.index = (t.variant == 'temperate') ? 0 : ((t.variant == 'warm') ? 1 : 2);",
+     "v.is_cold = t.variant == 'cold';"
+    ],
+    "animate": [
+     "setup",
+     {
+      "walk": "query.modified_move_speed"
+     },
+     "look_at_target"
+    ],
+    "initialize": [
+     "v.machines_mutant = 0.0;"
+    ]
+   },
+   "render_controllers": [
+    "controller.render.machines_cow"
+   ],
+   "spawn_egg": {
+    "texture": "spawn_egg_cow"
+   }
+  }
+ }
+}
